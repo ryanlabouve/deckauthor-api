@@ -18,3 +18,4 @@ AllCops:
     - '**/bin/**'
     - 'Guardfile'
     - 'Gemfile'
+    - 'db/schema.rb'
