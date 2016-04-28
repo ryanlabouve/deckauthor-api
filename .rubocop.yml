@@ -1,0 +1,20 @@
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 199
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+  EnforcedStyle: nested
+  SupportedStyles:
+    - nested
+    - compact
+Documentation:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - '**/bin/**'
+    - 'Guardfile'
+    - 'Gemfile'
