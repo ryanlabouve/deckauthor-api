@@ -10,6 +10,7 @@ gem 'spring', :group => :development
 
 gem 'sqlite3'
 gem 'jsonapi-resources'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development do
   gem 'guard'

@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428044602) do
+ActiveRecord::Schema.define(version: 20160428065132) do
 
   create_table "decks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "name"
     t.string   "uuid"
+    t.integer  "user_id"
   end
+
+  add_index "decks", ["user_id"], name: "index_decks_on_user_id"
 
   create_table "slides", force: :cascade do |t|
     t.text     "content"
@@ -28,5 +31,12 @@ ActiveRecord::Schema.define(version: 20160428044602) do
   end
 
   add_index "slides", ["deck_id"], name: "index_slides_on_deck_id"
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "email"
+    t.string   "password_digest"
+  end
 
 end

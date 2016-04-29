@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  jsonapi_resources :decks
+  jsonapi_resources :decks do
+    jsonapi_related_resources :slides
+  end
+  jsonapi_resources :slides
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
